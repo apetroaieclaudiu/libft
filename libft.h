@@ -56,7 +56,7 @@ char*	ft_strjoin(char const *s1, char const *s2);
 char*	ft_strtrim(char const *s);
 char**	ft_strsplit(char const *s, char c);  
 void	ft_putchar(char c);
-void	ft_putstr(char cont *s);
+void	ft_putstr(char const *s);
 void	ft_putendl(char const *s); 
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);

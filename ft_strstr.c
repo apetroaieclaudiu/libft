@@ -1,36 +1,29 @@
-#include <string.h>
+#include "libft.h"
 
 char* ft_strstr(const char *big, const char *little)
 {
-	char*	p;
-	char*	q;
-	char*	aux;
+	int		i;
+	int		j;
+	int		k;
+	int		good;
 
-	p = (char*) big;
-	q = (char*) little;
-	aux = p;
-
-	if (*q == '\0')
-		return p;
-
-	while (*p)
+	if (!ft_strlen(little))
+		return ((char *)big);
+	i = -1;
+	good = 0;
+	while (*(big + ++i) && !good)
 	{
-		if (*p == *q)
+		if (*(big + i) == *(little + 0))
 		{
-			aux = p;
-			while (*p && *q && *p == *q)
-			{
-				p++;
-				q++;
-			}
-
-			if (*q == '\0')
-				return aux;
-
-			return NULL;
+			j = 0;
+			k = i;
+			good = 1;
+			while (*(little + j))
+				if (*(little + j++) != *(big + k++))
+					good = 0;
+			if (good)
+				return ((char *)big + i);
 		}
-		p++;
 	}
-
-	return NULL;
+	return (NULL);
 }

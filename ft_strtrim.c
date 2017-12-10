@@ -10,11 +10,11 @@ char*	ft_strtrim(char const *s)
 	{
 		s++;
 	}
-	start = s;
+	start = (char*) s;
 	while (*s)
 	{
-		if (*s != ' ' && *s != '\t' && s != '\n')
-			p = s;
+		if (*s != ' ' && *s != '\t' && *s != '\n')
+			p = (char*) s;
 		s++;
 	}
 

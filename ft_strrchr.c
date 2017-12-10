@@ -13,6 +13,7 @@ char*	ft_strrchr(const char *s, int c)
 			aux = p;
 		p++;
 	}
-
+	if (c == '\0')
+		return p;
 	return aux;
 }

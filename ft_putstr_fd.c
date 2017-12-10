@@ -7,7 +7,7 @@ void ft_putstr_fd(char const *s, int fd)
 	p = (char*) s;
 	while(*p)
 	{
-		ft_putchar_fd(*p);
+		ft_putchar_fd(*p, fd);
 		p++;
 	}
 }

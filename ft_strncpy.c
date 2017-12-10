@@ -10,6 +10,11 @@ char*	ft_strncpy(char *dest, const char *src, size_t size)
 		*dest++ = *src++;
 		size--;
 	}
-	*dest = '\0';
+
+	while (size)
+	{
+		*dest++ = '\0';
+		size--;
+	}
 	return save;
 }

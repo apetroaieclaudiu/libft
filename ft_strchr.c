@@ -11,6 +11,7 @@ char*	ft_strchr(const char *s, int c)
 			return p;
 		p++;
 	}
-
+	if (c == '\0')
+		return p;
 	return (NULL);
 }

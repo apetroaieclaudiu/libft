@@ -2,18 +2,16 @@
 
 void*	ft_memccpy(void *dest, const void *src,int c, size_t n)
 {
-	char			*csrc;
-	char			*cdest;
-	unsigned int	i;
+	char	*ptr;
+	size_t	i;
 
-	cdest = (char *)dest;
- 	csrc = (char *)src;
- 	i = 0;
-	while (i < n && csrc[i] != c)
-	{ 	
-       cdest[i] = csrc[i];
-       i++;
-    }
-
-    return dest;
+	i = -1;
+	ptr = dest;
+	while (++i < n)
+	{
+		*(ptr + i) = *((unsigned char *)src + i);
+		if (*((unsigned char *)src + i) == (unsigned char)c)
+			return (dest + i + 1);
+	}
+	return (NULL);
 }

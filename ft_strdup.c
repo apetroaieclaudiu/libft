@@ -1,20 +1,23 @@
-#include <stdlib.h>
+#include "libft.h"
 
 char*	ft_strdup(const char *s)
 {
 	char	*str;
     char	*p;
-    int		len;
+    char    *q;
 
-    len = 0;
-    while (s[len])
-        len++;
-
-    str = (char*) malloc(len + 1);
+    
+    str = (char*) malloc(ft_strlen(s) + 1);
+    if (!str)
+        return NULL;
     p = str;
-
-    while (*s)
-        *p++ = *s++;
+    q = (char*) s;
+    while (*q)
+    {
+        *p = *q;
+        p++;
+        q++;
+    }
     
     *p = '\0';
     
