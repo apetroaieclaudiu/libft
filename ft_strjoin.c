@@ -6,7 +6,8 @@ char*	ft_strjoin(char const *s1, char const *s2)
 	char* start;
 
 	p = ft_strnew(ft_strlen(s1) + ft_strlen(s2) - 1);
-
+	if(!p)
+		return (NULL);
 	start = p;
 
 	ft_strcat(p, s1);

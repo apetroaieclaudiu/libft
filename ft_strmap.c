@@ -2,16 +2,24 @@
 
 char*	ft_strmap(char const *s, char (*f)(char))
 {
-	char* p;
+	char	*fstr;
+	int		i;
+	int		j;
 
-	p  = (char*) s;
-	while (*p)
+	if (s && f)
 	{
-		*p = (*f)(*p);
-		p++;
+		i = 0;
+		j = ft_strlen((char *)s);
+		fstr = (char *)malloc(j + 1);
+		if (!fstr)
+			return (NULL);
+		while (s[i] != 0)
+		{
+			fstr[i] = f(s[i]);
+			i++;
+		}
+		fstr[i] = '\0';
+		return (fstr);
 	}
-
-	p = (char*) s;
-
-	return p;
+	return (NULL);
 }

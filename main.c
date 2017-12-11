@@ -10,6 +10,6 @@ void test(unsigned int i,char *test)
 
 int main()
 {
-	printf("%d %d\n", atoi("  20   2"), ft_atoi("   20  2 "));
+	printf("%d %d\n", isalpha(20), ft_isalpha(20));
 	return 0;
 }

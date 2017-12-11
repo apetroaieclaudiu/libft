@@ -1,10 +1,6 @@
 int	ft_isalpha(int c)
 {
-	char car;
-
-	car = c;
-
-	if (car >= 'A' && car <= 'z')
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return	1;
 	return 0;
 }
