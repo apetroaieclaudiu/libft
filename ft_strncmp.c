@@ -2,11 +2,11 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char*	p;
-	char*	q;
+	unsigned char*	p;
+	unsigned char*	q;
 
-	p = (char*) s1;
-	q = (char*) s2;
+	p = (unsigned char*) s1;
+	q = (unsigned char*) s2;
 	while (*q && *p && *p == *q && n)
 	{
 		p++;

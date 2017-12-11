@@ -10,11 +10,6 @@ void test(unsigned int i,char *test)
 
 int main()
 {
-	char mem[] = "Didi";
-	char mm[] = " este foarte frumoasa";
-	char* test;
-	test = ft_strjoin(mem,mm);
-	puts(test);
-
+	printf("%d %d\n", atoi("  20   2"), ft_atoi("   20  2 "));
 	return 0;
 }
