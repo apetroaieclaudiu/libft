@@ -14,6 +14,7 @@ FILES		= ft_memset.c \
 				ft_strcat.c \
 				ft_strncat.c \
 				ft_strlcat.c \
+				ft_itoa.c \
 				ft_strchr.c \
 				ft_strrchr.c \
 				ft_strstr.c \
@@ -52,6 +53,11 @@ FILES		= ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_lstnew.c \
+				ft_lstadd.c \
+				ft_lstdel.c \
+				ft_lstdelone.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
 			
 OBJ			= $(FILES:%.c=%.o)
 

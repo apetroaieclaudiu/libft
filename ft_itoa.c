@@ -12,61 +12,35 @@
 
 #include "libft.h"
 
-static int		nr_cuv(const char *s, char c)
+static size_t	get_str_len(int n)
 {
-	int		contor;
-	int		este_cuv;
+	size_t		i;
 
-	este_cuv = 0;
-	contor = 0;
-	while (*s != '\0')
-	{
-		if (este_cuv == 1 && *s == c)
-			este_cuv = 0;
-		if (este_cuv == 0 && *s != c)
-		{
-			este_cuv = 1;
-			contor++;
-		}
-		s++;
-	}
-	return (contor);
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
 
-static int		lungime_cuvant(const char *s, char c)
+char			*ft_itoa(int n)
 {
-	int		len;
+	char			*str;
+	size_t			str_len;
+	unsigned int	n_cpy;
 
-	len = 0;
-	while (*s != c && *s != '\0')
+	str_len = get_str_len(n);
+	n_cpy = n;
+	if (n < 0)
 	{
-		len++;
-		s++;
+		n_cpy = -n;
+		str_len++;
 	}
-	return (len);
-}
-
-char			**ft_strsplit(char const *s, char c)
-{
-	char	**t;
-	int		nb_word;
-	int		index;
-
-	index = 0;
-	nb_word = nr_cuv((const char *)s, c);
-	t = (char **)malloc(sizeof(*t) * (nr_cuv((const char *)s, c) + 1));
-	if (t == NULL)
+	if (!(str = ft_strnew(str_len)))
 		return (NULL);
-	while (nb_word--)
-	{
-		while (*s == c && *s != '\0')
-			s++;
-		t[index] = ft_strsub((const char *)s, 0, lungime_cuvant((const char *)s, c));
-		if (t[index] == NULL)
-			return (NULL);
-		s = s + lungime_cuvant(s, c);
-		index++;
-	}
-	t[index] = NULL;
-	return (t);
+	str[--str_len] = n_cpy % 10 + '0';
+	while (n_cpy /= 10)
+		str[--str_len] = n_cpy % 10 + '0';
+	if (n < 0)
+		*(str + 0) = '-';
+	return (str);
 }
