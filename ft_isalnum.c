@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 22:03:27 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/11 22:06:51 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/12 16:29:04 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int		ft_isalnum(int c)
 {
 	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
 		return (1);
-	return (0);	
+	return (0);
 }

@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/12 20:40:09 by capetroa          #+#    #+#             */
+/*   Updated: 2017/12/12 20:40:45 by capetroa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char**	ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
+	char	**e;
 
-	char**	e;
-
-	e = (char**) s;
+	e = (char**)s;
 	*(*e) = c;
 	if (s)
-		return e;
-	return NULL;
+		return (e);
+	return (NULL);
 }

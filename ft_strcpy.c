@@ -1,12 +1,24 @@
-char*	ft_strcpy(char *dest, const char *src)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/12 20:19:13 by capetroa          #+#    #+#             */
+/*   Updated: 2017/12/12 20:19:56 by capetroa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strcpy(char *dest, const char *src)
 {
 	char *save;
-	
+
 	save = dest;
-	while(*src)
+	while (*src)
 	{
 		*dest++ = *src++;
 	}
 	*dest = '\0';
-	return save;
+	return (save);
 }

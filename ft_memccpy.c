@@ -1,6 +1,18 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/12 16:59:25 by capetroa          #+#    #+#             */
+/*   Updated: 2017/12/12 17:00:19 by capetroa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void*	ft_memccpy(void *dest, const void *src,int c, size_t n)
+#include "libft.h"
+
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	char	*ptr;
 	size_t	i;
