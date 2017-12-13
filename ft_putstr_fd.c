@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:09:22 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:10:14 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:18:21 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char const *s, int fd)
 	char *p;
 
 	p = (char*)s;
+	if (!s)
+		return ;
 	while (*p)
 	{
 		ft_putchar_fd(*p, fd);

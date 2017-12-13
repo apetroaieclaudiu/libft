@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:22:10 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:22:45 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:07:52 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_strequ(char const *s1, char const *s2)
 
 	p = (char*)s1;
 	q = (char*)s2;
+	if (!s1 || !s2)
+		return (0);
 	while (*p && *q && *p == *q)
 	{
 		p++;

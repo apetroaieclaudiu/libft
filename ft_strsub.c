@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:40:55 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:41:59 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:10:12 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*ret;
 	char	*aux;
 
+	if (!s)
+		return (NULL);
 	if (start > ft_strlen(s) || len > (ft_strlen(s) - start))
 		return (NULL);
 	p = ft_strnew((size_t)len);

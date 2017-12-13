@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:01:22 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:01:26 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:04:29 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap)
+		return ;
 	if (!ap)
 		free(*ap);
 	*ap = NULL;

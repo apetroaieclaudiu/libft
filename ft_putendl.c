@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:06:45 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:06:51 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:13:54 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
+	if (!s)
+		return ;
 	ft_putstr(s);
 	ft_putchar('\n');
 }

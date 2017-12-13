@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:32:14 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:32:45 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 12:08:33 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (!s1 || !s2)
+		return (0);
 	if (ft_strncmp(s1, s2, n) == 0)
 		return (1);
 	return (0);
