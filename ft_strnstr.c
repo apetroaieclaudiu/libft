@@ -6,7 +6,7 @@
 /*   By: capetroa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 20:35:50 by capetroa          #+#    #+#             */
-/*   Updated: 2017/12/12 20:39:03 by capetroa         ###   ########.fr       */
+/*   Updated: 2017/12/13 14:16:35 by capetroa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,16 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*p;
-	char	*q;
-	char	*aux;
+	size_t	len2;
 
-	p = (char*)big;
-	q = (char*)little;
-	aux = p;
-	if (*q == '\0')
-		return (p);
-	while (*p && len)
+	if (*little == '\0')
+		return ((char *)big);
+	len2 = ft_strlen(little);
+	while (*big != '\0' && len-- >= len2)
 	{
-		if (*p == *q)
-		{
-			aux = p;
-			while (*p++ && *q++ && *p == *q)
-			{
-			}
-			if (*q == '\0' || *p == *q)
-				return (aux);
-			return (NULL);
-		}
-		p++;
-		len--;
+		if (*big == *little && ft_memcmp(big, little, len2) == 0)
+			return ((char *)big);
+		big++;
 	}
 	return (NULL);
 }
